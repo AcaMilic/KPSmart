@@ -1,0 +1,84 @@
+.navigation-padding {
+    padding-top: 10rem;
+
+    @include respond(phone) {
+        text-align: center;
+        margin-top: -20rem;
+    }
+
+    @include respond(tab-port) {
+        text-align: center;
+        margin-top: -15rem;
+    }
+}
+
+.navigation-footer {
+    padding: 15rem 0;
+    background-image: linear-gradient(to left bottom,
+        rgba($color-black, 0.9),
+        rgba($color-primary-dark, 0.9)), url(../images/backgroundsecond.jpg);
+    transform: skewY(-7deg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    color: $color-primary;
+
+    p{
+        color: $color-white;
+        font-size: 1.3rem;
+    }
+
+    &>* {
+        transform: skewY(7deg);
+    }
+
+
+    .phone-and-mail {
+        @include respond(phone) {
+            text-align: center;
+
+        }
+
+        @include respond(tab-port) {
+            text-align: center;
+        }
+
+        text-align: left;
+
+        .green {
+            color: $color-primary;
+        }
+
+
+        span {
+            font-size: 1.3rem;
+            color: $color-white;
+
+            a {
+                color: $color-white;
+                text-decoration: underline $color-primary;
+            }
+        }
+
+
+    }
+
+
+    .icons {
+        a {
+            text-decoration: none;
+            color: $color-white;
+            padding: 0 1rem;
+            font-size: 2.6rem;
+            transition: .4s ease-in-out;
+
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+    }
+
+}

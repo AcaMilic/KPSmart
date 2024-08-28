@@ -1,0 +1,43 @@
+// Defining color variables
+$primary-color: #007297; // Hex value
+$black: #1a1a1a;
+
+// COLORS
+$color-logo: #709634;
+$color-primary: #007297;
+$color-primary-lighter: #5fa8c0;
+$color-primary-light: rgb(103, 202, 136);;
+$color-primary-dark: rgb(42, 40, 42);
+
+$color-primary-mix-light: linear-gradient($color-primary-light, $color-primary);
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #BFC3BA;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-medium: rgb(88, 88, 88);
+$color-grey-dark-3: #333;
+
+$color-logo: rgba(0, 0, 0, 0.1);
+
+
+$color-white: #ffffff;
+$color-black: #000;
+
+
+// FONT
+$default-font-size: 1.5rem;
+
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+
+// loader
+
+$size: 20rem;

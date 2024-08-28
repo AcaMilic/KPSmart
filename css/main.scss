@@ -1,0 +1,49 @@
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Elements
+@import "elements/nav";
+@import "elements/header";
+@import "elements/form";
+@import "elements/category";
+@import "elements/buttons";
+@import "elements/footer";
+
+// Base
+@import "base/animations";
+@import "base/grid";
+@import "base/base";
+@import "base/utilities";
+@import "base/typography";
+
+
+body{
+    overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+// Define the breakpoint variable
+$tablet-breakpoint: 992px;
+
+// Apply styles based on the breakpoint
+@media (max-width: $tablet-breakpoint) {
+  nav.navbar {
+    padding: 0; // Remove padding on screens <= 992px
+    .navbar-nav{
+        padding: 1rem;
+    }
+    .navbar-toggler{
+        margin-right: 1rem;
+        color: $color-white;
+        background-color: $black;
+
+        .navbar-toggler .fas {
+          color: $color-white; 
+        }
+    }
+  }
+}
+  
