@@ -53,3 +53,18 @@
 .u-margin-left-for-buttons {
     margin-left: 4rem;
 }
+.u-margin-right {
+    margin-right: 2rem;
+}
+
+.image-flex{
+
+    display: flex;             /* Enable Flexbox */
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically (optional) */
+}
+
+.image-center img{
+    max-width: 100%;           /* Make sure the image scales properly */
+    height: auto;
+}

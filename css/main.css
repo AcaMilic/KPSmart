@@ -19,14 +19,46 @@ ORDER: Base + typography > general layout + grid > page layout > components
 nav {
   padding: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   transition: color 0.3s ease-in-out;
 }
+nav .navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 nav .navbar-brand img {
-  width: 200px;
+  width: 200px; /* Adjust width as needed */
+  /* Responsive adjustments */
 }
 @media only screen and (max-width: 56.25em) {
   nav .navbar-brand img {
     width: 100px;
+  }
+}
+nav .logo-text {
+  position: relative;
+  bottom: 45px;
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center; /* Center align text under the logo */
+  /* Responsive adjustments */
+}
+@media only screen and (max-width: 112.5em) {
+  nav .logo-text {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 62em) {
+  nav .logo-text {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  nav .logo-text {
+    font-size: 1rem;
+    bottom: 20px;
   }
 }
 nav .nav-item {
@@ -58,7 +90,7 @@ nav .dropdown-item a {
   cursor: pointer;
 }
 nav .dropdown-item a:hover {
-  color: #007297;
+  color: rgb(45, 158, 166);
 }
 nav .dropdown-item a:active {
   background-color: #ffffff;
@@ -70,11 +102,11 @@ nav a {
 }
 @media only screen and (max-width: 56.25em) {
   nav a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 nav a:hover {
-  color: #007297;
+  color: rgb(45, 158, 166);
 }
 nav .aidoo {
   left: 100%;
@@ -170,6 +202,271 @@ nav .popup-menu .menu-item:hover {
   transition: 1s ease-in-out;
 }
 .header .fa-chevron-down:hover {
+  color: #ffffff;
+}
+
+.header-wifi {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(42, 40, 42, 0.8), rgba(0, 0, 0, 0.8)), url(../images/background-wifi.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+  .header-wifi {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header-wifi {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+.header-wifi__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .header-wifi__text-box {
+    top: 45%;
+    width: 100%;
+  }
+}
+.header-wifi .fa-chevron-down {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  display: inline-block;
+  width: 12px;
+  margin-left: -12px;
+  font-size: 36px;
+  line-height: 14px;
+  z-index: 999;
+  animation: bounce 3000ms infinite;
+  transition: 1s ease-in-out;
+}
+.header-wifi .fa-chevron-down:hover {
+  color: #ffffff;
+}
+
+.header-pro {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(42, 40, 42, 0.8), rgba(0, 0, 0, 0.8)), url(../images/aidoo-main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+  .header-pro {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header-pro {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+.header-pro__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .header-pro__text-box {
+    top: 45%;
+    width: 100%;
+  }
+}
+.header-pro .fa-chevron-down {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  display: inline-block;
+  width: 12px;
+  margin-left: -12px;
+  font-size: 36px;
+  line-height: 14px;
+  z-index: 999;
+  animation: bounce 3000ms infinite;
+  transition: 1s ease-in-out;
+}
+.header-pro .fa-chevron-down:hover {
+  color: #ffffff;
+}
+
+.header-knix {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(42, 40, 42, 0.8), rgba(0, 0, 0, 0.8)), url(../images/aidoo-knx-main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+  .header-knix {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header-knix {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+.header-knix__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .header-knix__text-box {
+    top: 45%;
+    width: 100%;
+  }
+}
+.header-knix .fa-chevron-down {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  display: inline-block;
+  width: 12px;
+  margin-left: -12px;
+  font-size: 36px;
+  line-height: 14px;
+  z-index: 999;
+  animation: bounce 3000ms infinite;
+  transition: 1s ease-in-out;
+}
+.header-knix .fa-chevron-down:hover {
+  color: #ffffff;
+}
+
+.header-zwave {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(42, 40, 42, 0.8), rgba(0, 0, 0, 0.8)), url(../images/aidoo-zwave-main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+  .header-zwave {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header-zwave {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+.header-zwave__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .header-zwave__text-box {
+    top: 45%;
+    width: 100%;
+  }
+}
+.header-zwave .fa-chevron-down {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  display: inline-block;
+  width: 12px;
+  margin-left: -12px;
+  font-size: 36px;
+  line-height: 14px;
+  z-index: 999;
+  animation: bounce 3000ms infinite;
+  transition: 1s ease-in-out;
+}
+.header-zwave .fa-chevron-down:hover {
+  color: #ffffff;
+}
+
+.header-zigbee {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(42, 40, 42, 0.8), rgba(0, 0, 0, 0.8)), url(../images/aidoo-zigbee-main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+  .header-zigbee {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 100% 80%, 50% 90%, 0 80%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header-zigbee {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+.header-zigbee__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .header-zigbee__text-box {
+    top: 45%;
+    width: 100%;
+  }
+}
+.header-zigbee .fa-chevron-down {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  display: inline-block;
+  width: 12px;
+  margin-left: -12px;
+  font-size: 36px;
+  line-height: 14px;
+  z-index: 999;
+  animation: bounce 3000ms infinite;
+  transition: 1s ease-in-out;
+}
+.header-zigbee .fa-chevron-down:hover {
   color: #ffffff;
 }
 
@@ -340,7 +637,7 @@ nav .popup-menu .menu-item:hover {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
+  height: 60rem;
   border: none transparent;
   outline: none;
 }
@@ -363,13 +660,13 @@ nav .popup-menu .menu-item:hover {
   transform: rotateY(180deg);
 }
 .carta__side--back-1 {
-  background-image: linear-gradient(to right bottom, rgb(103, 202, 136), rgb(42, 40, 42));
+  background-image: linear-gradient(to right bottom, rgb(159, 203, 66), rgb(42, 40, 42));
 }
 .carta__side--back-2 {
   background-image: linear-gradient(to right bottom, rgb(42, 40, 42), #007297);
 }
 .carta__side--back-3 {
-  background-image: url(../img/comingsoon.jpg);
+  background-image: linear-gradient(to right bottom, #5fa8c0, #007297);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -387,7 +684,7 @@ nav .popup-menu .menu-item:hover {
 }
 .carta__picture {
   background-size: cover;
-  height: 23rem;
+  height: 25rem;
   background-blend-mode: screen;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -405,10 +702,57 @@ nav .popup-menu .menu-item:hover {
   background-position: center;
 }
 .carta__picture--3 {
-  background-image: linear-gradient(to right bottom, rgb(103, 202, 136), #007297);
+  background-image: url(../images/architecture.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--4 {
+  background-image: url(../images/aidoo-wifi-inverter-vrf.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--5 {
+  background-image: url(../images/aidoo-pro-inverter-vrf.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--6 {
+  background-image: url(../images/aidoo-knx-inverter-vrf.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--7 {
+  background-image: url(../images/aidoo-zwave-inverter-vrf.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--8 {
+  background-image: url(../images/aidoo-zigbee-inverter-vrf.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--9 {
+  background-image: url(../images/aidoo-pro-airtowater.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--10 {
+  background-image: url(../images/aidoo-knx-airtowater.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--11 {
+  background-image: url(../images/aidoo-pro-fancoil.png);
+  background-size: cover;
+  background-position: center;
+}
+.carta__picture--12 {
+  background-image: url(../images/aidoo-pro-inverter-vrf.png);
+  background-size: cover;
+  background-position: center;
 }
 .carta__heading {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: right;
@@ -436,7 +780,7 @@ nav .popup-menu .menu-item:hover {
   padding: 3rem;
 }
 .carta__details p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #007297;
   font-weight: 700;
 }
@@ -523,6 +867,357 @@ nav .popup-menu .menu-item:hover {
   color: #ffffff;
 }
 
+.wifi-images img {
+  width: 100%;
+}
+@media only screen and (max-width: 112.5em) {
+  .wifi-images img {
+    width: 100%;
+  }
+}
+
+.image-container {
+  text-align: center;
+}
+@media only screen and (max-width: 75em) {
+  .image-container img {
+    width: 99%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .image-container img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.airzone-cloud-app .paragraph-types {
+  font-size: 1.6rem;
+}
+.airzone-cloud-app .image-list {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.airzone-cloud-app .image-list li {
+  margin: 0 10px;
+  cursor: pointer;
+  list-style-type: none;
+  padding: 1.6rem;
+  margin: 2rem 0;
+  text-align: left;
+  font-size: 1.6rem;
+  border: 3px solid #ccc;
+  color: #303030;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 75em) {
+  .airzone-cloud-app .image-list li {
+    font-size: 1.3rem;
+  }
+}
+.airzone-cloud-app .image-list li img {
+  height: 4rem;
+  transition: filter 0.3s;
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 75em) {
+  .airzone-cloud-app .image-list li img {
+    height: 2rem;
+  }
+}
+
+.image-list li.active {
+  background: #007297;
+  border: 3px solid #007297;
+  color: white;
+}
+
+.image-list li.active img {
+  filter: invert(100%);
+}
+
+.buttons-app-store img {
+  width: 30%;
+}
+
+img.bigger-button {
+  width: 49%;
+}
+
+.airzone-cloud-app .butn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.airzone-cloud-app .butn a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.testimonial-slider {
+  padding: 2rem;
+  position: relative; /* Ensure the container is positioned relative to the arrows */
+}
+
+.roww .text-center {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.slides .slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 4rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  height: 100%;
+}
+
+.testimonial-text {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.testimonial-author p {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.rating {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+p.reviews {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  width: 100%;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 0;
+  border-radius: 50%;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.aidoo-wifi-content span {
+  font-size: 2rem;
+  color: #007297;
+}
+.aidoo-wifi-content p {
+  font-size: 1.5rem;
+}
+
+.aidoo-wifi-content-last {
+  margin-top: 10rem;
+}
+@media only screen and (max-width: 75em) {
+  .aidoo-wifi-content-last {
+    margin-top: 5rem;
+  }
+}
+.aidoo-wifi-content-last span {
+  font-size: 2rem;
+  color: #007297;
+}
+.aidoo-wifi-content-last p {
+  font-size: 1.5rem;
+}
+
+.install-wi-fi img {
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.install-wi-fi a {
+  color: #007297;
+}
+.install-wi-fi a:hover {
+  text-decoration: none;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #007297;
+}
+
+.accordion-header {
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.accordion-content {
+  padding: 1.5rem;
+  display: none;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+}
+.accordion-content p {
+  font-size: 1.3rem;
+}
+
+.accordion-header i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: transform 0.3s ease;
+  color: rgb(159, 203, 66);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.video-accordion iframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.aido-img img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .aido-section h3 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .aido-section .butn {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.aido-section .butn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .advanced-pro h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .advanced-pro p {
+    font-size: 1.4rem;
+  }
+}
+
+.aidoo-individual {
+  display: flex; /* Make the container a flex container */
+}
+@media only screen and (max-width: 56.25em) {
+  .aidoo-individual {
+    display: block;
+  }
+}
+.aidoo-individual .aido-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Fill the height of the parent container */
+}
+.aidoo-individual .aido-img img {
+  max-width: 100%; /* Ensure the image scales correctly */
+  height: auto; /* Maintain aspect ratio */
+}
+.aidoo-individual .aido-img-second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Fill the height of the parent container */
+}
+@media only screen and (max-width: 56.25em) {
+  .aidoo-individual .aido-img-second img {
+    margin-right: 10rem;
+    margin-top: 5rem;
+  }
+}
+.aidoo-individual .aido-img-second img {
+  max-width: 100%; /* Ensure the image scales correctly */
+  height: auto; /* Maintain aspect ratio */
+}
+.aidoo-individual p {
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 75em) {
+  .aidoo-individual p {
+    font-size: 1.2rem;
+  }
+}
+.aidoo-individual .butn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .butn, .butn:link, .butn:visited {
   text-decoration: none;
   padding: 1.5rem 2.5rem;
@@ -567,11 +1262,11 @@ nav .popup-menu .menu-item:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .butn--whitee {
-  background-color: rgb(103, 202, 136);
+  background-color: rgb(159, 203, 66);
   color: #ffffff;
 }
 .butn--whitee::after {
-  background-color: rgb(103, 202, 136);
+  background-color: rgb(159, 203, 66);
 }
 .butn--white {
   background-color: #ffffff;
@@ -581,7 +1276,7 @@ nav .popup-menu .menu-item:hover {
   background-color: #ffffff;
 }
 .butn--white:hover {
-  color: rgb(103, 202, 136);
+  color: rgb(159, 203, 66);
 }
 .butn--green {
   background-color: #007297;
@@ -693,6 +1388,44 @@ nav .popup-menu .menu-item:hover {
 }
 .navigation-footer .icons a:hover {
   color: #007297;
+}
+
+.table-container {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+  margin: 0 auto; /* Center the container */
+}
+.table-container table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: #fafafa;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.table-container table td, .table-container table th {
+  padding: 1rem;
+}
+.table-container table thead tr {
+  height: 60px;
+  background: #007297;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .table-container table thead tr {
+    height: 30px;
+    font-size: 1.2rem;
+  }
+}
+.table-container table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #E3F1D5;
+}
+.table-container table tbody tr:last-child {
+  border: 0;
 }
 
 @keyframes moveInLeft {
@@ -970,15 +1703,15 @@ nav .popup-menu .menu-item:hover {
   }
 }
 .roww {
-  max-width: 114rem;
+  max-width: 130rem;
   margin: 0 auto;
 }
 .roww:not(:last-child) {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 @media only screen and (max-width: 56.25em) {
   .roww:not(:last-child) {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -996,12 +1729,12 @@ nav .popup-menu .menu-item:hover {
   float: left;
 }
 .roww [class^=col-]:not(:last-child) {
-  margin-right: 6rem;
+  margin-right: 4rem;
 }
 @media only screen and (max-width: 56.25em) {
   .roww [class^=col-]:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -1010,22 +1743,22 @@ nav .popup-menu .menu-item:hover {
   }
 }
 .roww .col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
+  width: calc((100% - 4rem) / 2);
 }
 .roww .col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3);
+  width: calc((100% - 8rem) / 3);
 }
 .roww .col-2-of-3 {
-  width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
+  width: calc(2 * (100% - 8rem) / 3 + 4rem);
 }
 .roww .col-1-of-4 {
-  width: calc((100% - 3 * 6rem) / 4);
+  width: calc((100% - 12rem) / 4);
 }
 .roww .col-2-of-4 {
-  width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
+  width: calc(2 * (100% - 12rem) / 4 + 4rem);
 }
 .roww .col-3-of-4 {
-  width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
+  width: calc(3 * (100% - 12rem) / 4 + 8rem);
 }
 
 *,
@@ -1049,7 +1782,7 @@ html {
     font-size: 56%;
   }
 }
-@media only screen and (min-width: 112.5em) {
+@media only screen and (max-width: 112.5em) {
   html {
     font-size: 75%;
   }
@@ -1133,6 +1866,21 @@ body {
   margin-left: 4rem;
 }
 
+.u-margin-right {
+  margin-right: 2rem;
+}
+
+.image-flex {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (optional) */
+}
+
+.image-center img {
+  max-width: 100%; /* Make sure the image scales properly */
+  height: auto;
+}
+
 body {
   font-family: "Comfortaa", cursive;
   font-weight: 400;
@@ -1143,10 +1891,11 @@ body {
 .heading-primary {
   color: #ffffff;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .heading-primary--main {
   display: block;
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 100;
   text-transform: capitalize;
   letter-spacing: 2rem;
@@ -1165,7 +1914,7 @@ body {
 }
 .heading-primary--sub {
   display: block;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 1rem;
   animation: moveInRight 2s ease-out;
   animation-delay: 2s;
@@ -1182,11 +1931,26 @@ body {
   }
 }
 
+.paragraph-types {
+  font-size: 2.2rem;
+}
+
+.wifi-images-rounded img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.image-text-center {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
 .heading-secondary {
   font-size: 3.5rem;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #007297, rgb(103, 202, 136));
+  background-image: linear-gradient(to right, #007297, rgb(159, 203, 66));
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
@@ -1206,7 +1970,7 @@ body {
   font-size: 2.8rem;
   font-weight: 500;
   display: inline-block;
-  background-image: linear-gradient(to right, rgb(103, 202, 136), #007297);
+  background-image: linear-gradient(to right, rgb(159, 203, 66), #007297);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
@@ -1218,6 +1982,10 @@ body {
 }
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+.paragraph-bellow-image {
+  font-size: 1.4rem;
 }
 
 body {
