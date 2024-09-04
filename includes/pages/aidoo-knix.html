@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KP Smart Grid Aidoo KNIX</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="../../css/main.css">
+            <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome for icons (if needed) -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../images/logo_dark_bg.png" type="image/x-icon">
+    </head>
+    <body>
+
+    <header class="header-knix" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../images/logo_dark_bg.png" alt="Logo">
+        <span class="logo-text">KP Smart GRids</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars" id="menuIcon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="controlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Control Solutions <i class="fa-solid fa-caret-down"></i>
+                </a> 
+                                <!-- Popups -->
+                <div id="popupMenu" class="popup-menu">
+                    <p class="text-center popup-title">FOR INVERTER/VRF SYSTEMS:</p>
+                    <hr>
+                    <a class="dropdown-item menu-item" target="_blank"  href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/wi-fi/">Aidoo Wi-Fi</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/knx/">Aidoo KNX</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/z-wave/">Aidoo Z-WAVE</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/zigbee/">Aidoo Zigbee</a>
+                </div>
+
+                <div id="popupMenutwo" class="popup-menu">
+                    <p class="text-center popup-title">FOR AIR TO WATER UNITS</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/knx/">Aidoo KNX</a>
+                </div>
+
+                <div id="popupMenuthree" class="popup-menu">
+                    <p class="text-center popup-title">FOR FANCOIL EQUIPMENT</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                </div>
+
+                <div id="popupMenufour" class="popup-menu">
+                    <p class="text-center popup-title">FOR VENTILATION EQUIPMENT</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                </div>
+
+                <div id="popupMenufive" class="popup-menu">
+                    <p class="text-center popup-title">Air conditioning and heating control</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/">Air conditioning and heating zoning: Flexa 4.0</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/underfloor/">Radiant Underfloor System </a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/radiators/">Radiators </a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/easyzone/">Plug & Play Air conditioning Zoning: Easyzone IAQ 
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/acuazone/">HVAC integral control system: Acuazone</a>
+                </div>
+
+                <div id="popupMenusix" class="popup-menu">
+                    <p class="text-center popup-title">Quality Air Zone - AirQ</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/quality-air-zone/airq-box/">AirQ Box 
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/quality-air-zone/airq-sensor/">AirQ Sensor</a>
+                </div>
+                                <!-- Popups end -->
+                                    
+                <div class="dropdown-menu" aria-labelledby="controlDropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" id="controlRangeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aidoo Range <i class="fa-solid fa-caret-right"></i></a>
+                    <div class="dropdown-menu aidoo">
+                        <a id="menuButton" class="menu-button dropdown-item">FOR INVERTER/VRF SYSTEMS</a>
+                        <a id="menuButtontwo" class="menu-button dropdown-item" href="#">FOR AIR TO WATER UNITS</a>
+                        <a id="menuButtonthree" class="menu-button dropdown-item" href="#">FOR FANCOIL EQUIPMENT</a>
+                        <a id="menuButtonfour" class="menu-button dropdown-item" href="#">FOR VENTILATION EQUIPMENT</a>
+                    </div>
+                    <a id="menuButtonfive" class="menu-button dropdown-item">Air conditioning and heating control </a>
+                    <a id="menuButtonsix" class="menu-button dropdown-item">Quality Air Zone - AirQ</a>
+                </div>
+            </li>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projects <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                    <a class="dropdown-item" href="#">Calculation Software</a>
+                    <a class="dropdown-item" href="#">Resources</a>
+                    <a class="dropdown-item" href="#">Project Support</a>
+                    <a class="dropdown-item" href="#">Web Tools</a>
+                </div>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="resources.html">
+                    Resources
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div class="header__text-box">
+      <img src="../../images/logo-aidoo-pro.svg" alt="Aidoo">
+      <h1 class="heading-primary">
+        <span class="heading-primary--sub">
+            Aidoo KNX Inverter/VRF
+
+        </span>
+      </h1>
+      <p class="paragraph">
+        Integracija AC jedinica u KNX sisteme
+      </p>
+    </div>
+
+    <a href="#portfolio"><i class="fas fa-chevron-down hide_on_scroll"></i></a>
+    </header>    
+
+    <div class="roww">
+        <section class="advanced-pro text-center">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary u-medium-margin-top-big u-margin-bottom-medium" data-sal-duration="1200" data-sal="slide-right" data-sal-delay="300" data-sal-easing="ease-out-bounce">
+                    Aidoo KNX pruža rešenje za KNX integraciju AC jedinica sa sertifikovanim protokolima
+                </h2>
+                <p class="paragraph-types">
+                    Aidoo KNX je integracioni prolaz koji omogućava dvosmernu komunikaciju sa Inverter/VRF jedinicama zahvaljujući protokolima razvijenim i potvrđenim u saradnji sa proizvođačima HVAC opreme.
+                </p>
+            <div class="aido-img">
+            <img src="../../images/aidoo-knx-diagram.png" alt="Aidoo Dijagram">
+            </div>
+            </div>
+        </section>
+    </div>
+
+<div class="roww">
+    <section class="advanced-pro text-center">
+        <div class="u-center-text u-margin-bottom-medium">
+            <h2 class="heading-secondary u-medium-margin-top-big u-margin-bottom-medium" data-sal-duration="1200" data-sal="slide-right" data-sal-delay="300" data-sal-easing="ease-out-bounce">
+                Šta Aidoo KNX nudi?
+            </h2>
+        </div>
+    </section>
+    <div class="col-1-of-4">
+        <div class="aido-img">
+            <img src="../../images/unit-hvac-aidoo.jpg" alt="">
+        </div>
+        <h5 class="image-text-center">
+            Pouzdana komunikacija
+        </h5>
+        <p class="paragraph-bellow-image">
+            Žičana povezanost sa AC jedinicom za dvosmernu komunikaciju, sa potvrđenim akcijama i statusima i detekcijom grešaka.
+        </p>
+    </div>
+    <div class="col-1-of-4">
+        <div class="aido-img">
+            <img src="../../images/pulg-and-play-aidoo.jpg" alt="">
+        </div>
+        <h5 class="image-text-center">
+            Plug&Play
+        </h5>
+        <p class="paragraph-bellow-image">
+            Nema potrebe za adapterom ili spoljnim napajanjem.
+        </p>
+    </div>
+    <div class="col-1-of-4">
+        <div class="aido-img">
+            <img src="../../images/manufacturers-thermostat.jpg" alt="">
+        </div>
+        <h5 class="image-text-center">
+            Autonomna operacija
+        </h5>
+        <p class="paragraph-bellow-image">
+            Originalni kontroler i funkcije AC jedinice se održavaju.
+        </p>
+    </div>
+    <div class="col-1-of-4">
+        <div class="aido-img">
+            <img src="../../images/connections-aidoo.jpg" alt="">
+        </div>
+        <h5 class="image-text-center">
+            Automatizacija
+        </h5>
+        <p class="paragraph-bellow-image">
+            Tri konfigurabilna digitalna ulaza za automatizaciju akcija.
+        </p>
+    </div>
+</div>
+
+<div class="roww aidoo-individual u-medium-margin-top-big">
+    <div class="col-1-of-2 aidoo-wifi-content">
+        <h2 class="heading-secondary u-medium-margin-top-big u-margin-bottom-medium" data-sal-duration="1200" data-sal="slide-right" data-sal-delay="300" data-sal-easing="ease-out-bounce">
+            Karakteristike
+            Aidoo KNX
+        </h2>
+            <p>
+                <span>></span> KNX sertifikovani proizvod
+                <br>
+                <span>></span> Konfigurisanje u ETS
+                <br>
+                <span>></span> Potpuno interoperabilan sa KNX
+                <br>
+                <span>></span> Napajan preko KNX magistrale
+            </p>
+    </div>
+    <div class="col-1-of-2">
+        <div class="aido-img">
+            <img src="../../images/aidoo-knx-functions.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="roww">
+    <div class="accordion">
+        <h2 class="heading-secondary u-medium-margin-top-big u-margin-bottom-medium text-center">
+            Često Postavljana Pitanja
+        </h2>
+        <div class="accordion-item">
+            <div class="accordion-header">Kako da pronađete model vaše jedinice? <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+            <div class="accordion-content">              
+                    <p>
+                        Split jedinice: sa strane Split jedinice. 
+                        <br>
+                        Kanalske jedinice: na nalepnici unutrašnje jedinice pristupnoj kroz lažni plafon.
+                        <br>
+                        Kasetne jedinice: na nalepnici unutrašnje jedinice pristupnoj kroz lažni plafon.
+                    </p>
+                <div class="video-accordion">
+                    <iframe width="400px" height="400px" src="https://www.youtube.com/embed/SvB36UXrtN0?list=TLGGXnWTXjxT7p8wMTA5MjAyNA" title="Airzone Aidoo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Zašto je potreban specifičan uređaj za svaku marku i model jedinice? <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+            <div class="accordion-content">
+                <p>Airzone je sarađivao sa više od 90 brendova opreme za klimatizaciju kako bi stvorio Aidoo Wi-Fi uređaje kompatibilne sa više od 17.000 modela jedinica. Prava komunikacija sa svakim modelom je testirana i odobrena od strane svakog brenda. Razvoj specifičnog uređaja za svaku marku i model omogućava pouzdanu i sigurnu kontrolu klima jedinice:
+                    <br>
+                    · Aidoo Wi-Fi pruža dvosmernu komunikaciju sa jedinicom: ne samo da šalje komande, već i prima potvrde o ispravnoj realizaciji od jedinice. Zato Airzone Cloud aplikacija uvek odražava stvarnu situaciju u instalaciji.
+                    <br>
+                    · Aidoo Wi-Fi komunicira sa klima jedinicom koristeći protokol originalnog proizvođača, što sprečava greške.
+                    <br>
+                    · Da bi se obezbedila stabilnost i pouzdanost veze, Aidoo Wi-Fi se povezuje sa klima jedinicom putem kabla, sa procesom povezivanja prilagođenim karakteristikama svake jedinice.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Ako jedinica nije navedena ili nije kompatibilna<i class="fa fa-angle-down" aria-hidden="true"></i></div>
+            <div class="accordion-content">
+                <p>Ako jedinica nije navedena ili se pojavljuje kao nekompatibilna na našem popisu, potrebna je ručna provera kompatibilnosti. Zatražite proveru kompatibilnosti putem ovog obrasca.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Tehnička dokumentacija<i class="fa fa-angle-down" aria-hidden="true"></i></div>
+            <div class="accordion-content">
+                <p>Tehnička dokumentacija Preuzmite tehničku dokumentaciju za vaš specifični Aidoo Wi-Fi model iz naše sekcije za podršku.</p>
+            </div>
+        </div>
+    </div>             
+</div>
+
+<div class="roww aido-section u-margin-top-big">
+    <div class="col-1-of-2">
+        <div class="aido-img">
+            <img src="../../images/aidoo-range.png" alt="Aidoo Opseg">
+        </div>
+    </div>
+    <div class="col-1-of-2">
+        <h3 class="section-title">
+            Pronađite pravi Aidoo za vašu instalaciju
+        </h3>
+        <button class="butn butn--whitee u-margin-top-small">
+            <a href="../pages/aidoo-range.html" target="_blank">
+                Aidoo Opseg
+            </a>
+          </button>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

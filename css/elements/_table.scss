@@ -1,0 +1,44 @@
+.table-container {
+
+  overflow-x: auto; /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+  margin: 0 auto; /* Center the container */
+  
+  table 			      { 
+    border-spacing: 1; 
+    border-collapse: collapse; 
+    background:#fafafa;
+    border-radius:6px;
+    overflow:hidden;
+    width:100%;
+    margin:0 auto;
+    position:relative;
+
+    
+    td,th           { 
+  
+      padding: 1rem;
+    }
+  
+    thead tr        { 
+      height:60px;
+      background:$color-primary;
+      color: $color-white;
+      font-size:1.6rem;
+  
+      
+      @include respond(tab-port){
+        height:30px;
+        font-size:1.2rem;
+    }
+  
+    }
+    
+    tbody tr        { height:48px; border-bottom:1px solid #E3F1D5 ;
+      &:last-child  { border:0; }
+    }
+    
+  }
+
+}  
+

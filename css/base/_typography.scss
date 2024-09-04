@@ -10,10 +10,11 @@ body {
 .heading-primary {
   color: $color-white;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 
   &--main {
     display: block;
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 100;
     text-transform: capitalize;
     letter-spacing: 2rem;
@@ -32,7 +33,7 @@ body {
 
   &--sub {
     display: block;
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 1rem;
     animation: moveInRight 2s ease-out;
     animation-delay: 2s;
@@ -49,6 +50,21 @@ body {
     }
   }
 }
+.paragraph-types{
+  font-size: 2.2rem;
+}
+
+.wifi-images-rounded img{
+  border-radius: 50%;
+  width: 100%;
+}
+
+.image-text-center{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -89,4 +105,7 @@ body {
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+}
+.paragraph-bellow-image{
+  font-size: 1.4rem;
 }

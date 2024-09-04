@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KP Smart Grid Aidoo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="../../css/main.css">
+            <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome for icons (if needed) -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../images/logo_dark_bg.png" type="image/x-icon">
+    </head>
+    <body>
+
+    <header class="header-wifi" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../images/logo_dark_bg.png" alt="Logo">
+        <span class="logo-text">KP Smart GRids</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars" id="menuIcon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="controlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Control Solutions <i class="fa-solid fa-caret-down"></i>
+                </a> 
+                                <!-- Popups -->
+                <div id="popupMenu" class="popup-menu">
+                    <p class="text-center popup-title">FOR INVERTER/VRF SYSTEMS:</p>
+                    <hr>
+                    <a class="dropdown-item menu-item" target="_blank"  href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/wi-fi/">Aidoo Wi-Fi</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/knx/">Aidoo KNX</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/z-wave/">Aidoo Z-WAVE</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/zigbee/">Aidoo Zigbee</a>
+                </div>
+
+                <div id="popupMenutwo" class="popup-menu">
+                    <p class="text-center popup-title">FOR AIR TO WATER UNITS</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/knx/">Aidoo KNX</a>
+                </div>
+
+                <div id="popupMenuthree" class="popup-menu">
+                    <p class="text-center popup-title">FOR FANCOIL EQUIPMENT</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                </div>
+
+                <div id="popupMenufour" class="popup-menu">
+                    <p class="text-center popup-title">FOR VENTILATION EQUIPMENT</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/aidoo/pro/">Aidoo PRO</a>
+                </div>
+
+                <div id="popupMenufive" class="popup-menu">
+                    <p class="text-center popup-title">Air conditioning and heating control</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/">Air conditioning and heating zoning: Flexa 4.0</a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/underfloor/">Radiant Underfloor System </a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/radiators/">Radiators </a>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/easyzone/">Plug & Play Air conditioning Zoning: Easyzone IAQ 
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/acuazone/">HVAC integral control system: Acuazone</a>
+                </div>
+
+                <div id="popupMenusix" class="popup-menu">
+                    <p class="text-center popup-title">Quality Air Zone - AirQ</p>
+                    <hr>
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/quality-air-zone/airq-box/">AirQ Box 
+                    <a class="dropdown-item menu-item"  target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/quality-air-zone/airq-sensor/">AirQ Sensor</a>
+                </div>
+                                <!-- Popups end -->
+                                    
+                <div class="dropdown-menu" aria-labelledby="controlDropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" id="controlRangeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aidoo Range <i class="fa-solid fa-caret-right"></i></a>
+                    <div class="dropdown-menu aidoo">
+                        <a id="menuButton" class="menu-button dropdown-item">FOR INVERTER/VRF SYSTEMS</a>
+                        <a id="menuButtontwo" class="menu-button dropdown-item" href="#">FOR AIR TO WATER UNITS</a>
+                        <a id="menuButtonthree" class="menu-button dropdown-item" href="#">FOR FANCOIL EQUIPMENT</a>
+                        <a id="menuButtonfour" class="menu-button dropdown-item" href="#">FOR VENTILATION EQUIPMENT</a>
+                    </div>
+                    <a id="menuButtonfive" class="menu-button dropdown-item">Air conditioning and heating control </a>
+                    <a id="menuButtonsix" class="menu-button dropdown-item">Quality Air Zone - AirQ</a>
+                </div>
+            </li>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projects <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                    <a class="dropdown-item" href="#">Calculation Software</a>
+                    <a class="dropdown-item" href="#">Resources</a>
+                    <a class="dropdown-item" href="#">Project Support</a>
+                    <a class="dropdown-item" href="#">Web Tools</a>
+                </div>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="resources.html">
+                    Resources
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div class="header__text-box">
+      <h1 class="heading-primary">
+        <span class="heading-primary--sub">Aidoo Devices</span>
+      </h1>
+      <p class="paragraph">
+        Connectivity and home automation integration for both new and old AC units.
+      </p>
+    </div>
+
+    <a href="#portfolio"><i class="fas fa-chevron-down hide_on_scroll"></i></a>
+    </header>    
+
+
+    <section class="section-portfolio" id="portfolio">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary u-medium-margin-top-big" data-sal-duration="1200" data-sal="slide-right"
+            data-sal-delay="300" data-sal-easing="ease-out-bounce">
+            Inverter/VRF Units
+          </h2>
+        </div>
+    
+        <div class="roww">
+        <div class="col-1-of-3">
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--4">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--2" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo Wi-Fi</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        The fastest and easiest way to add Wi-Fi control to an Inverter/VRF HVAC installation.
+                    </p>
+                </div>
+    
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-2">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                    <p class="carta__portfolio-only">Discover Aidoo Wi-Fi</p>
+                  </div>
+                  <a href="https://www.airzonecontrol.com/en/en/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--5">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--1" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo Pro</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Aidoo Pro Inverter offers a wide range of integration possibilities for Inverter/VRF units in home automation and building control systems.
+                    </p>
+                </div>
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-1">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                  <p class="carta__portfolio-only">Discover Aidoo Pro </p>
+                  </div>
+                  <a href="https://www.enex.it/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--6">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--1" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo KNX</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Gateway for two-way control and integration of Inverter/VRF units in KNX TP-1 control systems.
+                    </p>
+                </div>
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-3">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                  <p class="carta__portfolio-only">Discover Aidoo KNX </p>
+                  </div>
+                  <a href="https://www.enex.it/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+
+
+      <section class="section-portfolio" id="portfolio">   
+        <div class="roww">
+        <div class="col-1-of-2">
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--7">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--2" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo Z-Wave</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Gateway for two-way control and integration of Inverter/VRF units in Z-Wave systems. Aidoo Z-Wave transforms an AC unit into a Z-Wave device.
+                    </p>
+                </div>
+    
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-2">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                    <p class="carta__portfolio-only">Discover Aidoo Z-Wave </p>
+                  </div>
+                  <a href="https://www.airzonecontrol.com/en/en/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--8">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--1" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo Zigbee</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Gateway for two-way control and integration of Inverter/VRF units in Zigbee systems. Aidoo Zigbee transforms an AC unit into a Zigbee device.
+                    </p>
+                </div>
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-1">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                  <p class="carta__portfolio-only">Discover Aidoo Zigbee </p>
+                  </div>
+                  <a href="https://www.enex.it/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section-portfolio" id="portfolio">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary u-medium-margin-top-big" data-sal-duration="1200" data-sal="slide-right"
+            data-sal-delay="300" data-sal-easing="ease-out-bounce">
+            Air to Water Units
+          </h2>
+        </div>
+    
+        <div class="roww">
+        <div class="col-1-of-2">
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--9">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--2" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo Pro</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Aidoo Pro Air To Water is a device for the remote control of air to water units through the Airzone Cloud app.
+                    </p>
+                </div>
+    
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-2">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                    <p class="carta__portfolio-only">Discover Aidoo Pro </p>
+                  </div>
+                  <a href="https://www.airzonecontrol.com/en/en/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--10">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--1" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo KNX</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Aidoo Pro Inverter offers a wide range of integration possibilities for Inverter/VRF units in home automation and building control systems.
+                    </p>
+                </div>
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-1">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                  <p class="carta__portfolio-only">Discover Aidoo KNX Air To Water </p>
+                  </div>
+                  <a href="https://www.enex.it/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="section-portfolio" id="portfolio">
+
+        </div>
+    
+        <div class="roww">
+        <div class="col-1-of-2">
+            <h2 class="heading-secondary u-medium-margin-top-big text-center u-margin-bottom-medium" data-sal-duration="1200" data-sal="slide-right"
+            data-sal-delay="300" data-sal-easing="ease-out-bounce">
+            Fancoil Units
+          </h2>
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--11">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--2" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo Pro</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Aidoo Pro Fancoil allows the integration of fancoil units in building management systems or via mobile app. Compatible with all types of fancoil.
+                    </p>
+                </div>
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-2">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                    <p class="carta__portfolio-only">Discover Aidoo Pro Fancoil</p>
+                  </div>
+                  <a href="https://www.airzonecontrol.com/en/en/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <h2 class="heading-secondary u-medium-margin-top-big u-margin-bottom-medium text-center" data-sal-duration="1200" data-sal="slide-right"
+            data-sal-delay="300" data-sal-easing="ease-out-bounce">
+            Ventilation Units
+          </h2>
+            <div class="carta">
+              <div class="carta__side carta__side--front">
+                <div class="carta__picture carta__picture--12">
+                  &nbsp;
+                </div>
+                <h4 class="carta__heading">
+                  <span class="carta__heading-span carta__heading-span--1" data-sal-duration="1200" data-sal="zoom-in"
+                    data-sal-delay="300" data-sal-easing="ease-out-bounce">Aidoo Pro</span>
+                </h4>
+                <div class="carta__details">
+                    <p>
+                        Aidoo Pro Ventilation improves air quality through complete control from the Airzone Cloud app. Compatible with home automation systems and BMS.
+                    </p>
+                </div>
+              </div>
+              <div class="carta__side carta__side--back carta__side--back-1">
+                <div class="carta__cta">
+                  <div class="carta__portfolio-box">
+                  <p class="carta__portfolio-only">Discover Aidoo Pro Ventilation </p>
+                  </div>
+                  <a href="https://www.enex.it/" target="_blank" class="butn butn--white">Here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+<div class="roww">
+    <section class="section-table">
+        <h2 class="heading-secondary u-medium-margin-top-big u-margin-bottom-medium text-center" data-sal-duration="1200" data-sal="slide-right"
+        data-sal-delay="300" data-sal-easing="ease-out-bounce">
+        Comparison of Aidoo solutions
+        </h2>
+        <div class="table-container">
+          <table>
+              <thead>
+                <tr>
+                  <th>*</th>
+                  <th>AIDOO Wi-FI</th>
+                  <th>AIDOO PRO</th>
+                  <th>AIDOO Z-WAVE</th>
+                  <th>AIDOO ZIGBEE</th>
+                  <th>Aidoo KNX</th>
+                </tr>
+              <thead>
+              <tbody>
+                <tr>
+                  <td>AC unit</td>
+                  <td>Inverter/VRF</td>
+                  <td>Inverter/VRF, Fancoil,
+                      Air to
+                      Water</td>
+                  <td>Inverter/VRF</td>
+                  <td>Inverter/VRF</td>
+                  <td>Inverter/VRF</td>
+                </tr>
+                   <tr>
+                  <td>
+                      Connectivity
+                  </td>
+                  <td>
+                      Wi-Fi 2.4 GHz
+                  </td>
+                  <td>
+                      Wi-Fi Dual 2.4-5
+                      GHz
+                  </td>
+                  <td>
+                      Z-Wave
+                  </td>
+                  <td>
+                      Zigbee
+                  </td>
+                  <td>
+                      KNX
+                  </td>
+                </tr>
+                   <tr>
+                  <td>
+                      App
+  
+                  </td>
+                  <td>&#10004;</td>
+                  <td>&#10004;</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                   <tr>
+                      <td>
+                          Voice control    
+                      </td>
+                      <td>&#10004;</td>
+                      <td>&#10004;</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                </tr>
+                   <tr>
+                      <td>
+                          Modbus   
+                      </td>
+                      <td>
+                          Modbus RTU
+                      </td>
+                      <td>
+                          Modbus RTU and
+                          TCP
+                      </td>
+                      <td>
+                          Modbus RTU
+                      </td>
+                      <td>
+                          Modbus RTU
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          BACnet   
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          BACnet MS/TP and BACnet
+                          IP
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          GYW input for smart thermostats
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          Available for Inverter/VRF
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          API REST and integration
+                          of drivers
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          &#10004;
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          Cloud API
+                      </td>
+                      <td>
+                          &#10004;
+                      </td>
+                      <td>
+                          &#10004;
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          Airzone thermostat
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          Available for Inverter/VRF
+                          and Fancoil
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          AirQ air quality
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          Compatible with air
+                          quality
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          Digital input
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          Eco mode and
+                          presence and window
+                          sensors
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          3 configurable inputs
+                      </td>
+                </tr>
+                   <tr>
+                      <td>
+                          Auxiliary heat output
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          Available for Inverter/VRF
+                          and Fancoil
+                      </td>
+                      <td>
+                          -
+                      </td>
+                      <td>
+                          -
+  
+                      </td>
+                      <td>
+                          -
+                      </td>
+                </tr>
+              </tbody>
+          </table>    
+        </div>
+    </section>
+</div>      
+ 
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

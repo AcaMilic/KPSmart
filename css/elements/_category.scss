@@ -12,7 +12,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 52rem;
+    height: 60rem;
     border: none transparent;
     outline: none;
 
@@ -45,7 +45,7 @@
             }
 
             &-3 {
-                background-image: url(../img/comingsoon.jpg);
+                background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -70,7 +70,7 @@
     // FRONT SIDE STYLING
     &__picture {
         background-size: cover;
-        height: 23rem;
+        height: 25rem;
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -93,12 +93,69 @@
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary);
+            background-image:
+            url(../images/architecture.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        &--4 {
+            background-image:
+            url(../images/aidoo-wifi-inverter-vrf.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--5 {
+            background-image:
+            url(../images/aidoo-pro-inverter-vrf.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--6 {
+            background-image:
+            url(../images/aidoo-knx-inverter-vrf.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--7 {
+            background-image:
+            url(../images/aidoo-zwave-inverter-vrf.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--8 {
+            background-image:
+            url(../images/aidoo-zigbee-inverter-vrf.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--9 {
+            background-image:
+            url(../images/aidoo-pro-airtowater.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--10 {
+            background-image:
+            url(../images/aidoo-knx-airtowater.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--11 {
+            background-image:
+            url(../images/aidoo-pro-fancoil.png);
+            background-size: cover;
+            background-position: center;
+        }
+        &--12 {
+            background-image:
+            url(../images/aidoo-pro-inverter-vrf.png);
+            background-size: cover;
+            background-position: center;
         }
     }
 
     &__heading {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
         font-weight: 300;
         text-transform: uppercase;
         text-align: right;
@@ -138,7 +195,7 @@
         padding: 3rem;
 
         p {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: $color-primary;
             font-weight: 700;
 
@@ -250,5 +307,398 @@
             color: $color-white;
 
         }
+    }
+}
+
+.wifi-images img{
+
+    width: 100%;
+
+    @include respond(big-desktop) {
+        width: 100%;
+    }
+}
+.image-container {
+    text-align: center;
+
+    img
+        {
+
+
+        @include respond(tab-land){
+            width: 99%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    }
+
+}
+
+.airzone-cloud-app {
+
+    .paragraph-types{
+        font-size: 1.6rem;
+    }
+    
+    .image-list {
+    
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin: 0 10px;
+            cursor: pointer;
+            list-style-type: none;
+            padding: 1.6rem;
+            margin: 2rem 0;
+            text-align: left;
+            font-size: 1.6rem;
+            border: 3px solid #ccc;
+            color: #303030;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
+    
+            @include respond(tab-land){
+                font-size: 1.3rem;
+            }
+    
+            img {
+                height: 4rem;
+                transition: filter 0.3s;
+                margin-right: 1rem;
+    
+                @include respond(tab-land){
+                    height: 2rem;
+                }
+            }
+        }
+        
+    }
+
+}
+
+.image-list li.active {
+    background: $color-primary;
+    border: 3px solid $color-primary;
+    color: white;
+}
+
+
+.image-list li.active img {
+    filter: invert(100%);
+}
+.buttons-app-store img{
+    width: 30%;
+}
+img.bigger-button{
+    width: 49%;
+}
+.airzone-cloud-app .butn a{
+    text-decoration: none;
+    color: $color-white;
+
+    &:hover{
+    text-decoration: none;
+    color: $color-white;
+    }
+}
+
+.testimonial-slider {
+    padding: 2rem;
+    position: relative; /* Ensure the container is positioned relative to the arrows */
+}
+
+.roww {
+
+    .text-center{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 4rem;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+        height: 100%;
+    }
+}
+
+
+
+.testimonial-text {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    p{
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        font-weight: bold;
+        color: #333;
+        font-size: 1.2rem;
+    }
+}
+
+.rating {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+
+}
+p.reviews{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0;
+    font-size: 1.2rem;
+}
+.star {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+
+}
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 0;
+    border-radius: 50%;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.aidoo-wifi-content{
+    span{
+        font-size: 2rem;
+        color: $color-primary;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+.aidoo-wifi-content-last{
+
+    margin-top: 10rem;
+    @include respond(tab-land){
+        margin-top: 5rem;
+    }
+
+    span{
+        font-size: 2rem;
+        color: $color-primary;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+
+.install-wi-fi{
+    img{
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a{
+        color: $color-primary;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+
+.accordion-item {
+    border-bottom: 1px solid $color-primary;
+}
+
+.accordion-header {
+    padding: 1.5rem;
+    cursor: pointer;
+    position: relative;
+
+    font-size: 1.5rem;
+}
+
+.accordion-content {
+    padding:1.5rem;
+    display: none;
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+
+    p{
+        font-size: 1.3rem;
+    }
+}
+
+.accordion-header i {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: transform 0.3s ease;
+    color: $color-primary-light;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.video-accordion iframe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.aido-img img{
+    width: 100%;
+}
+.aido-section {
+    
+    h3{
+
+        @include respond(tab-port){
+            text-align: center;
+        }
+
+    }
+    .butn {
+
+
+        @include respond(tab-port) {
+            
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+    
+        a{
+            text-decoration: none;
+            color: $color-white;
+        
+        
+        }
+    }
+}
+
+.advanced-pro{
+
+
+    h2{
+        @include respond(tab-port) {
+            font-size: 2rem;
+        }
+    }
+    p{
+        @include respond(tab-port) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.aidoo-individual{
+    display: flex; /* Make the container a flex container */
+
+    @include respond(tab-port) {
+        display: block;
+    }
+    .aido-img{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Fill the height of the parent container */
+
+        img{
+        max-width: 100%; /* Ensure the image scales correctly */
+        height: auto; /* Maintain aspect ratio */
+        }
+    }
+    .aido-img-second{
+
+        @include respond(tab-port) {
+            img{
+                margin-right: 10rem;
+                margin-top: 5rem;
+            }
+
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Fill the height of the parent container */
+
+        img{
+        max-width: 100%; /* Ensure the image scales correctly */
+        height: auto; /* Maintain aspect ratio */
+        }
+    }
+
+    p{
+        font-size: 1.6rem;
+        @include respond(tab-land) {
+            font-size: 1.2rem;
+        }
+    }
+
+    .butn a{
+        text-decoration: none;
+        color: $color-white;
     }
 }

@@ -160,7 +160,60 @@ $(document).ready(function () {
     });
   });
   
-  
+  document.addEventListener('DOMContentLoaded', function() {
+    const listItems = document.querySelectorAll('.image-list li');
+    const mainImage = document.getElementById('mainImage');
+
+    // Function to set an item as active
+    function setActiveItem(item) {
+        listItems.forEach(li => li.classList.remove('active'));
+        item.classList.add('active');
+        const newImageSrc = item.getAttribute('data-image');
+        mainImage.src = newImageSrc;
+    }
+
+    // Set the first item as active on page load
+    if (listItems.length > 0) {
+        setActiveItem(listItems[0]);
+    }
+
+    // Add click event listeners to each list item
+    listItems.forEach(item => {
+        item.addEventListener('click', function() {
+            setActiveItem(this);
+        });
+    });
+});
+
+// testimonials
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelector('.slides');
+  const slideCount = document.querySelectorAll('.slide').length;
+  let currentIndex = 0;
+
+  function showSlide(index) {
+      // Ensure the index is within bounds
+      if (index < 0) index = slideCount - 1;
+      if (index >= slideCount) index = 0;
+
+      currentIndex = index;
+      const offset = -currentIndex * 100;
+      slides.style.transform = `translateX(${offset}%)`;
+  }
+
+  document.querySelector('.left-arrow').addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+  });
+
+  document.querySelector('.right-arrow').addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+  });
+
+  // Show the first slide initially
+  showSlide(currentIndex);
+});
 
 
 // // contact form
@@ -203,3 +256,20 @@ $("#sendForm").click(function (e) {
         });
     }
   });
+
+  // Accordion
+
+  $(document).ready(function() {
+    $(".accordion-header").on("click", function() {
+        // Toggle the corresponding accordion content
+        var $content = $(this).next(".accordion-content");
+        $(".accordion-content").not($content).slideUp(300); // Slide up other sections
+        $content.slideToggle(300); // Slide toggle current section
+
+        // Toggle rotation for the icon
+        $(this).find("i").toggleClass("rotate");
+
+        // Remove rotation from icons in other sections
+        $(".accordion-header").not($(this)).find("i").removeClass("rotate");
+    });
+});
