@@ -81,4 +81,44 @@
 
     }
 
+    .footer-logo{
+
+
+        .navbar-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .navbar-brand img {
+            width: 200px; /* Adjust width as needed */
+            /* Responsive adjustments */
+            @include respond(tab-port) {
+                width: 100px;
+            }
+        }
+        
+        .logo-text {
+            position: relative;
+            bottom: 45px;
+            font-weight: bold;
+            font-size: 1.7rem;
+            text-align: center; /* Center align text under the logo */
+            color: $color-white;
+            /* Responsive adjustments */
+            @include respond(big-desktop) {
+                font-size: 1.5rem;
+            }
+            @include respond(tab-port-middle) {
+                font-size: 1.2rem;
+            }
+            @include respond(tab-port) {
+                font-size: 1rem;
+                bottom: 20px;
+            }
+        }
+    
+    }
+
 }

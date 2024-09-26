@@ -3,13 +3,14 @@
 @import 'abstracts/mixins';
 
 // Elements
-@import "elements/nav";
 @import "elements/header";
+@import "elements/footer";
+@import "elements/nav";
 @import "elements/form";
 @import "elements/category";
 @import "elements/buttons";
-@import "elements/footer";
 @import "elements/table";
+
 
 // Base
 @import "base/animations";

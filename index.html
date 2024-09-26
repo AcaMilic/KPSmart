@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KP Smart Grid Homepage</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="css/main.css">
+            <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome for icons (if needed) -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <header class="header" id="header">
+
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo_dark_bg.png" alt="Logo">
+        <span class="logo-text">KP Smart GRids</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars" id="menuIcon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="controlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Rešenja za kontrolu <i class="fa-solid fa-caret-down"></i>
+              </a> 
+              <!-- Popups -->
+              <div id="popupMenu" class="popup-menu">
+                  <p class="text-center popup-title">ZA INVERTER/VRF SISTEME:</p>
+                  <hr>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aido-wi-fi.html">Aidoo Wi-Fi</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-pro.html">Aidoo PRO</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-knix.html">Aidoo KNX</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-z-wave.html">Aidoo Z-WAVE</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-zigbee.html">Aidoo Zigbee</a>
+              </div>
+  
+              <div id="popupMenutwo" class="popup-menu">
+                  <p class="text-center popup-title">ZA SISTEME VAZDUH-KANAL</p>
+                  <hr>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-pro.html">Aidoo PRO</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-knix.html">Aidoo KNX</a>
+              </div>
+  
+              <div id="popupMenuthree" class="popup-menu">
+                  <p class="text-center popup-title">ZA FANCOIL OPREMU</p>
+                  <hr>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-pro.html">Aidoo PRO</a>
+              </div>
+  
+              <div id="popupMenufour" class="popup-menu">
+                  <p class="text-center popup-title">ZA OPREMU ZA VENTILACIJU</p>
+                  <hr>
+                  <a class="dropdown-item menu-item" target="_blank" href="includes/pages/aidoo-pro.html">Aidoo PRO</a>
+              </div>
+  
+              <div id="popupMenufive" class="popup-menu">
+                  <p class="text-center popup-title">Kontrola klimatizacije i grejanja</p>
+                  <hr>
+                  <a class="dropdown-item menu-item" target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/">Klimatizacija i grejanje zonski: Flexa 4.0</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/underfloor/">Radijantni sistem podnog grejanja</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/flexa/radiators/">Radijatori</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/easyzone/">Plug & Play klimatizacija zonski: Easyzone IAQ</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/acuazone/">Integralni HVAC sistem: Acuazone</a>
+              </div>
+  
+              <div id="popupMenusix" class="popup-menu">
+                  <p class="text-center popup-title">Kvalitet vazduha zona - AirQ</p>
+                  <hr>
+                  <a class="dropdown-item menu-item" target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/quality-air-zone/airq-box/">AirQ Box</a>
+                  <a class="dropdown-item menu-item" target="_blank" href="https://www.airzonecontrol.com/en/en/control-solutions/quality-air-zone/airq-sensor/">AirQ Sensor</a>
+              </div>
+              <!-- Popups end -->
+  
+              <div class="dropdown-menu" aria-labelledby="controlDropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" id="controlRangeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aidoo Raspon <i class="fa-solid fa-caret-right"></i></a>
+                  <div class="dropdown-menu aidoo">
+                      <a id="menuButton" class="menu-button dropdown-item">ZA INVERTER/VRF SISTEME</a>
+                      <a id="menuButtontwo" class="menu-button dropdown-item" href="#">ZA SISTEME VAZDUH-KANAL</a>
+                      <a id="menuButtonthree" class="menu-button dropdown-item" href="#">ZA FANCOIL OPREMU</a>
+                      <a id="menuButtonfour" class="menu-button dropdown-item" href="#">ZA OPREMU ZA VENTILACIJU</a>
+                  </div>
+                  <a id="menuButtonfive" class="menu-button dropdown-item">Kontrola klimatizacije i grejanja <i class="fa-solid fa-caret-right"></i></a>
+                  <a id="menuButtonsix" class="menu-button dropdown-item">Kvalitet vazduha zona - AirQ <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+          </li>
+          <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Projekti <i class="fa-solid fa-caret-down"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                  <a class="dropdown-item" href="#">Softver za proračun</a>
+                  <a class="dropdown-item" href="#">Resursi</a>
+                  <a class="dropdown-item" href="#">Podrška za projekte</a>
+                  <a class="dropdown-item" href="#">Web alati</a>
+              </div>
+          </li> -->
+          <li class="nav-item">
+              <a class="nav-link" href="resources.html">
+                  Resursi
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                  Kontakt
+              </a>
+          </li>
+      </ul>
+  </div>
+  </nav>
+
+    <div class="header__text-box">
+      <h1 class="heading-primary">
+        <span class="heading-primary--sub">Welcome to our website</span>
+      </h1>
+      <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod praesentium voluptatibus beatae repudiandae ullam accusamus. Saepe vitae ullam consequatur libero.</p>
+      <a href="#" class="butn butn--green">Airzone</a>
+      <a href="#" class="butn butn--whitee">Enex</a>
+    </div>
+
+    <a href="#portfolio"><i class="fas fa-chevron-down hide_on_scroll"></i></a>
+    </header>    
+
+  <!-- portfolio -->
+
+  <section class="section-portfolio" id="portfolio">
+    <div class="u-center-text u-margin-bottom-big">
+      <h2 class="heading-secondary u-medium-margin-top-big" data-sal-duration="1200" data-sal="slide-right"
+        data-sal-delay="300" data-sal-easing="ease-out-bounce">
+        Naši Partneri
+      </h2>
+    </div>
+
+    <div class="roww">
+    <div class="col-1-of-2">
+        <div class="carta">
+          <div class="carta__side carta__side--front">
+            <div class="carta__picture carta__picture--2">
+              &nbsp;
+            </div>
+            <div class="carta__overlay"></div>
+            <!-- <h4 class="carta__heading">
+              <span class="carta__heading-span carta__heading-span--2" data-sal-duration="1200" data-sal="zoom-in"
+                data-sal-delay="300" data-sal-easing="ease-out-bounce">Airzone</span>
+            </h4> -->
+            <div class="carta__details">
+              <ul>
+                <p>Od 1997. godine, u Airzone-u analiziramo kako se sistemi za klimatizaciju i grejanje koriste u domovima i kancelarijama kako bismo pružili rešenja koja prilagođavaju rad ovih instalacija pojedinačnim potrebama svake zgrade i osobe.</p>
+              </ul>
+            </div>
+
+          </div>
+          <div class="carta__side carta__side--back carta__side--back-2">
+            <div class="carta__cta">
+              <div class="carta__portfolio-box">
+                <p class="carta__portfolio-only">Pogledajte Website.</p>
+              </div>
+              <a href="https://www.airzonecontrol.com/en/en/" target="_blank" class="butn butn--white">Ovde</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <div class="carta">
+          <div class="carta__side carta__side--front">
+            <div class="carta__picture carta__picture--1">
+              &nbsp;
+            </div>
+            <div class="carta__overlay"></div>
+
+            <!-- <h4 class="carta__heading">
+              <span class="carta__heading-span carta__heading-span--1" data-sal-duration="1200" data-sal="zoom-in"
+                data-sal-delay="300" data-sal-easing="ease-out-bounce">Enex</span>
+            </h4> -->
+            <div class="carta__details">
+              <ul>
+                <!-- <p>Made in:</p>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+                <li>Jquery</li>
+                <li>Javascript</li> -->
+                <p>Osnovan od strane veterana industrije i pionira u oblasti prirodnih rashladnih sistema, transformišući HVACR industriju sa ekološki održivim i visoko energetski efikasnim mehaničkim sistemima koji smanjuju globalno zagrevanje dok pomažu našim kupcima da postignu uspeh.</p>
+              </ul>
+            </div>
+          </div>
+          <div class="carta__side carta__side--back carta__side--back-1">
+            <div class="carta__cta">
+              <div class="carta__portfolio-box">
+                <p class="carta__portfolio-only">Pogledajte Website.</p>
+              </div>
+              <a href="https://www.enex.it/" target="_blank" class="butn butn--white">Ovde</a>
+              <!-- <a href="https://github.com/Koogru95/Villasgetaway/tree/master" target="_blank" class="butn butn--white u-margin-left-for-buttons">Github</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!--/ portfolio -->
+
+  <!-- contact -->
+
+  <section class="section-form" id="contact">
+    <div class="roww">
+      <div class="contact">
+        <div class="contact__form">
+          <form method="POST" action="form/sendemail.php" class="form">
+            <div class="u-margin-bottom-medium">
+              <h2 class="heading-secondary-medium" data-sal-duration="800" data-sal="slide-down" data-sal-delay="800"
+                data-sal-easing="ease-out-bounce">
+                Kontaktirajte nas
+              </h2>
+            </div>
+
+            <div class="form__group">
+              <input type="text" class="form__input" placeholder="Ime" id="name" name="name" required>
+              <label for="name" class="form__label">Ime</label>
+            </div>
+
+            <div class="form__group">
+              <input type="email" class="form__input" placeholder="Email adresa" id="email" name="email" required>
+              <label for="email" class="form__label">Email adresa</label>
+            </div>
+            <div class="form__group">
+              <textarea name="message" id="message" class="form-control" placeholder="Vaša Pourka" name="message"></textarea>
+            </div>
+
+            <div class="form__group">
+              <br>
+              <button class="butn butn--white" type="submit" id="sendForm" value="Submit" name="submit">Pošalji poruku</button>
+              <p id="success" class="greenSuccess">Poruka poslata!</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--/ contact -->
+
+
+
+
+  <!-- Footer -->
+ 
+  <footer class="navigation-footer">
+    <div class="roww navigation-padding">
+      <div class="col-1-of-3 footer-logo">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo_dark_bg.png" alt="Logo">
+        <span class="logo-text">KP Smart GRids</span>
+    </a>
+      </div> 
+      <div class="col-1-of-3">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dicta voluptate omnis quas quisquam. Commodi ab sunt corporis ratione beatae aperiam asperiores, adipisci explicabo dolorem provident! Expedita quos error magnam ipsa vero mollitia fuga maxime autem exercitationem. Ex, mollitia! Doloremque accusamus ab rerum quam ipsa tempore quas cupiditate hic ratione.</p>
+      </div>
+      <div class="col-1-of-3">
+        <div class="phone-and-mail">
+          <span class="green"><i class="fa-solid fa-phone"></i> </span><span> +38123-456-789</span>
+          <br>
+          <span class="green"><i class="fa-regular fa-envelope"></i> </span><span>info@smart-grids.rs</span>
+          <br>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ Footer -->
+
+
+
+            <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
