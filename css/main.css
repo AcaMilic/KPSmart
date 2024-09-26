@@ -46,6 +46,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   text-align: center;
 }
 @media only screen and (max-width: 37.5em) {
+  .header__text-box img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
   .header__text-box {
     position: relative;
     display: block;
@@ -640,7 +645,6 @@ nav .popup-menu .menu-item:hover {
 }
 .form .heading-secondary-medium {
   background-image: linear-gradient(to right, #ffffff, #007297);
-  padding: 1rem;
 }
 @media only screen and (max-width: 56.25em) {
   .form .heading-secondary-medium {
