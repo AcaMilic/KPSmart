@@ -2,6 +2,7 @@ nav {
     padding: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: rgba(0, 0, 0, 0.1);
+    z-index: 100; // Set a high z-index
 
 
     .navbar-brand {
@@ -104,6 +105,7 @@ nav {
         top: 0;
         margin: 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000000;
 
     
         a{
@@ -155,3 +157,54 @@ nav {
     }
 
 }
+
+@include respond(phone) {
+    .navbar {
+        z-index: 100; // Ensure it remains on top in mobile view
+    }
+    .header__text-box {
+        z-index: 1; // Ensure it stays below the navbar
+    }
+    .navbar-nav{
+        position: relative;
+        display: block;
+        background-color: $color-grey-dark-3;
+    }
+    
+    .header__text-box {
+        position: fixed;
+        top: 50%;
+        max-width: 90%;
+        .heading-primary--sub{
+            font-size: 2.2rem;
+        }
+
+        .paragraph{
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .buttons-header{
+            display: flex;
+        }
+    }
+
+}
+
+    .dropdown-menu {
+        position: absolute; // Change to absolute positioning
+        top: 100%; // Position it directly below the navbar
+        left: 0; // Align it to the left
+        z-index: 100; // Ensure it's above other content
+        display: none; // Hide by default
+
+        &.show {
+            display: block; // Show when active
+        }
+    }
+    .navbar {
+        position: relative; // Enables stacking context
+        z-index: 100; // Higher z-index
+        padding: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.1);
+    }

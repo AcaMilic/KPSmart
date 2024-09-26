@@ -26,21 +26,27 @@
     @include respond(phone) {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+      height: 120vh;
+
+
     }
 
-  
+    
+ 
     &__text-box {
+
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-  
-  
+
       @include respond(phone) {
-        top: 45%;
-        width: 100%;
-      }
+        position: relative; // Change to relative for mobile
+        display: block;
+        top: 30%; // Adjust position for mobile as needed
+    }
     }
   
     .fa-chevron-down {
