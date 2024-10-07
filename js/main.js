@@ -60,62 +60,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Four
 
-document.addEventListener('DOMContentLoaded', function() {
-    var menuButton = document.getElementById('menuButtonfour');
-    var popupMenu = document.getElementById('popupMenufour');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var menuButton = document.getElementById('menuButtonfour');
+//     var popupMenu = document.getElementById('popupMenufour');
 
-    // Toggle the popup menu on button click
-    menuButton.addEventListener('click', function() {
-        var isMenuVisible = popupMenu.style.display === 'block';
-        popupMenu.style.display = isMenuVisible ? 'none' : 'block';
-    });
+//     // Toggle the popup menu on button click
+//     menuButton.addEventListener('click', function() {
+//         var isMenuVisible = popupMenu.style.display === 'block';
+//         popupMenu.style.display = isMenuVisible ? 'none' : 'block';
+//     });
 
-    // Hide the popup menu when clicking outside of it
-    document.addEventListener('click', function(event) {
-        if (!popupMenu.contains(event.target) && !menuButton.contains(event.target)) {
-            popupMenu.style.display = 'none';
-        }
-    });
-});
+//     // Hide the popup menu when clicking outside of it
+//     document.addEventListener('click', function(event) {
+//         if (!popupMenu.contains(event.target) && !menuButton.contains(event.target)) {
+//             popupMenu.style.display = 'none';
+//         }
+//     });
+// });
 
-// Five
+// // Five
 
-document.addEventListener('DOMContentLoaded', function() {
-    var menuButton = document.getElementById('menuButtonfive');
-    var popupMenu = document.getElementById('popupMenufive');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var menuButton = document.getElementById('menuButtonfive');
+//     var popupMenu = document.getElementById('popupMenufive');
 
-    // Toggle the popup menu on button click
-    menuButton.addEventListener('click', function() {
-        var isMenuVisible = popupMenu.style.display === 'block';
-        popupMenu.style.display = isMenuVisible ? 'none' : 'block';
-    });
+//     // Toggle the popup menu on button click
+//     menuButton.addEventListener('click', function() {
+//         var isMenuVisible = popupMenu.style.display === 'block';
+//         popupMenu.style.display = isMenuVisible ? 'none' : 'block';
+//     });
 
-    // Hide the popup menu when clicking outside of it
-    document.addEventListener('click', function(event) {
-        if (!popupMenu.contains(event.target) && !menuButton.contains(event.target)) {
-            popupMenu.style.display = 'none';
-        }
-    });
-});
-// Six
+//     // Hide the popup menu when clicking outside of it
+//     document.addEventListener('click', function(event) {
+//         if (!popupMenu.contains(event.target) && !menuButton.contains(event.target)) {
+//             popupMenu.style.display = 'none';
+//         }
+//     });
+// });
+// // Six
 
-document.addEventListener('DOMContentLoaded', function() {
-    var menuButton = document.getElementById('menuButtonsix');
-    var popupMenu = document.getElementById('popupMenusix');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var menuButton = document.getElementById('menuButtonsix');
+//     var popupMenu = document.getElementById('popupMenusix');
 
-    // Toggle the popup menu on button click
-    menuButton.addEventListener('click', function() {
-        var isMenuVisible = popupMenu.style.display === 'block';
-        popupMenu.style.display = isMenuVisible ? 'none' : 'block';
-    });
+//     // Toggle the popup menu on button click
+//     menuButton.addEventListener('click', function() {
+//         var isMenuVisible = popupMenu.style.display === 'block';
+//         popupMenu.style.display = isMenuVisible ? 'none' : 'block';
+//     });
 
-    // Hide the popup menu when clicking outside of it
-    document.addEventListener('click', function(event) {
-        if (!popupMenu.contains(event.target) && !menuButton.contains(event.target)) {
-            popupMenu.style.display = 'none';
-        }
-    });
-});
+//     // Hide the popup menu when clicking outside of it
+//     document.addEventListener('click', function(event) {
+//         if (!popupMenu.contains(event.target) && !menuButton.contains(event.target)) {
+//             popupMenu.style.display = 'none';
+//         }
+//     });
+// });
 
 
 // Hide arrow from header on scroll
@@ -188,32 +188,32 @@ $(document).ready(function () {
 // testimonials
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelector('.slides');
-  const slideCount = document.querySelectorAll('.slide').length;
-  let currentIndex = 0;
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slides = document.querySelector('.slides');
+//   const slideCount = document.querySelectorAll('.slide').length;
+//   let currentIndex = 0;
 
-  function showSlide(index) {
-      // Ensure the index is within bounds
-      if (index < 0) index = slideCount - 1;
-      if (index >= slideCount) index = 0;
+//   function showSlide(index) {
+//       // Ensure the index is within bounds
+//       if (index < 0) index = slideCount - 1;
+//       if (index >= slideCount) index = 0;
 
-      currentIndex = index;
-      const offset = -currentIndex * 100;
-      slides.style.transform = `translateX(${offset}%)`;
-  }
+//       currentIndex = index;
+//       const offset = -currentIndex * 100;
+//       slides.style.transform = `translateX(${offset}%)`;
+//   }
 
-  document.querySelector('.left-arrow').addEventListener('click', () => {
-      showSlide(currentIndex - 1);
-  });
+//   document.querySelector('.left-arrow').addEventListener('click', () => {
+//       showSlide(currentIndex - 1);
+//   });
 
-  document.querySelector('.right-arrow').addEventListener('click', () => {
-      showSlide(currentIndex + 1);
-  });
+//   document.querySelector('.right-arrow').addEventListener('click', () => {
+//       showSlide(currentIndex + 1);
+//   });
 
-  // Show the first slide initially
-  showSlide(currentIndex);
-});
+//   // Show the first slide initially
+//   showSlide(currentIndex);
+// });
 
 
 // // contact form
