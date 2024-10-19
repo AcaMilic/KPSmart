@@ -907,4 +907,32 @@ p.reviews{
         height: 180%;
     } 
   
-  
+  .more-than{
+
+
+    h4{
+        font-size: 2rem;
+        color: $color-primary;
+    }
+    span{
+        color: $color-grey-light-3;
+    }
+    hr{
+        border: 2px solid $color-logo;
+        width: 50%;
+        background: $color-primary;
+    }
+  }
+  .m-auto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .slika-airzone{
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+  }
