@@ -219,43 +219,52 @@ $(document).ready(function () {
 // // contact form
 
 
-$("#sendForm").click(function (e) {
-    e.preventDefault();
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var message = $("#message").val();
-    if (name == '') {
-      $("#name").addClass('error');
-    } else {
-      $("#name").removeClass('error');
-    }
-    if (message == '') {
-      $("#message").addClass('error');
-    } else {
-      $("#message").removeClass('error');
-    }
-    if (email == '') {
-      $("#email").addClass('error');
-    } else {
-      $("#email").removeClass('error');
-    }
-  
-    if (email != '' && name != '' && message != '') {
-      $.ajax({
-          method: "POST",
-          url: "./form/sendemail.php",
-          data: {
-            email: email,
-            name: name,
-            message: message
-          }
-        })
-        .done(function (msg) {
-          console.log("Forma poslata!");
-          $("#success").show();
-        });
-    }
+$(document).ready(function() {
+  $("#sendForm").click(function (e) {
+      e.preventDefault();
+      var name = $("#name").val();
+      var email = $("#email").val();
+      var message = $("#message").val();
+      
+      // Input validation
+      if (name == '') {
+          $("#name").addClass('error');
+      } else {
+          $("#name").removeClass('error');
+      }
+      if (message == '') {
+          $("#message").addClass('error');
+      } else {
+          $("#message").removeClass('error');
+      }
+      if (email == '') {
+          $("#email").addClass('error');
+      } else {
+          $("#email").removeClass('error');
+      }
+
+      // Proceed with AJAX if all fields are filled
+      if (email != '' && name != '' && message != '') {
+          $.ajax({
+              method: "POST",
+              url: "../form/sendemail.php",
+              data: {
+                  email: email,
+                  name: name,
+                  message: message
+              },
+              success: function (response) {
+                  console.log("Form sent successfully!");
+                  // Redirect to index.html
+                  window.location.href = "../index.html"; // Adjust the path as necessary
+              },
+              error: function (xhr, status, error) {
+                  console.error("Error sending form: ", error);
+              }
+          });
+      }
   });
+});
 
   // Accordion
 
