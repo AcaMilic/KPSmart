@@ -369,7 +369,45 @@
   </section>
 
   <!--/ portfolio -->
+  <!-- contact -->
 
+  <section class="section-form" id="contact">
+    <div class="roww">
+      <div class="contact">
+        <div class="contact__form">
+          <form method="POST" action="../../form/sendemail.php" class="form">
+            <div class="u-margin-bottom-medium">
+              <h2 class="heading-secondary-medium" data-sal-duration="800" data-sal="slide-down" data-sal-delay="800"
+                data-sal-easing="ease-out-bounce">
+                Kontaktirajte nas
+              </h2>
+            </div>
+
+            <div class="form__group">
+              <input type="text" class="form__input" placeholder="Ime" id="name" name="name" required>
+              <label for="name" class="form__label">Ime</label>
+            </div>
+
+            <div class="form__group">
+              <input type="email" class="form__input" placeholder="Email adresa" id="email" name="email" required>
+              <label for="email" class="form__label">Email adresa</label>
+            </div>
+            <div class="form__group">
+              <textarea name="message" id="message" class="form-control" placeholder="Vaša Pourka" name="message"></textarea>
+            </div>
+
+            <div class="form__group">
+              <br>
+              <button class="butn butn--white" type="submit" id="sendForm" value="Submit" name="submit">Pošalji poruku</button>
+              <p id="success" class="greenSuccess">Poruka poslata!</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--/ contact -->
 
   <!-- Footer -->
  
@@ -399,8 +437,50 @@
   </footer>
   <!--/ Footer -->
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="../../js/jquery-3.2.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../../js/main.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#sendForm").click(function (e) {
+        e.preventDefault();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+        
+        $("#name, #email, #message").removeClass('error');
+        
+        if (name == '') {
+            $("#name").addClass('error');
+        }
+        if (email == '') {
+            $("#email").addClass('error');
+        }
+        if (message == '') {
+            $("#message").addClass('error');
+        }
+
+        if (email != '' && name != '' && message != '') {
+            $.ajax({
+                method: "POST",
+                url: "../../form/sendemail.php",
+                data: {
+                    email: email,
+                    name: name,
+                    message: message
+                },
+                dataType: "json"
+            })
+            .done(function (response) {
+                $("#success").text(response.message).show();
+            })
+            .fail(function () {
+                $("#success").text("An error occurred while sending your message.").show();
+            });
+        }
+    });
+  });
+</script>
 </body>
 </html>
