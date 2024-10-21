@@ -11,8 +11,7 @@
         <!-- Font Awesome for icons (if needed) -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="images/logo_dark_bg.png" type="image/x-icon">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="./js/main.js"></script>
+
     </head>
     <body>
 
@@ -225,6 +224,49 @@
 
 
             <!-- Bootstrap JS and dependencies -->
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#sendForm").click(function (e) {
+            e.preventDefault();
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var message = $("#message").val();
+            
+            $("#name, #email, #message").removeClass('error');
+            
+            if (name == '') {
+                $("#name").addClass('error');
+            }
+            if (email == '') {
+                $("#email").addClass('error');
+            }
+            if (message == '') {
+                $("#message").addClass('error');
+            }
+
+            if (email != '' && name != '' && message != '') {
+                $.ajax({
+                    method: "POST",
+                    url: "form/sendemail.php",
+                    data: {
+                        email: email,
+                        name: name,
+                        message: message
+                    },
+                    dataType: "json"
+                })
+                .done(function (response) {
+                    $("#success").text(response.message).show();
+                })
+                .fail(function () {
+                    $("#success").text("An error occurred while sending your message.").show();
+                });
+            }
+        });
+      });
+    </script>
 </body>
 </html>
